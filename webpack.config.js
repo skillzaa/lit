@@ -5,7 +5,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true
   },
-  mode: 'development',
+  mode: 'production',
   entry: './index.js',
   output: {
     filename: 'main.js',

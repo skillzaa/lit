@@ -31,6 +31,7 @@ this.abc = e.target.value;
 }
 
   render() {
+//we can also use @change      
     return html`
       <p>This Counter is made By Bilzaa: ${this.count}</p>
       <input type="text"

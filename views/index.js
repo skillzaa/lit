@@ -1,2 +1,2 @@
-import './main-view.js'
+// import './main-view.js'
 import './bilzaa-counter.js'

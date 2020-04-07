@@ -16,7 +16,7 @@ super();
 this.abc = "";    
 this.xyz = null;    
 this.data = [];    
-this.count=0;
+//this.count=0;
 }
 
 
@@ -24,7 +24,12 @@ clickHandler() {
 this.count++
 }
 showLog() {
-console.log('object :');
+  let event = new CustomEvent('my-event', {
+    detail: {
+      message: 'Something important happened'
+    }
+  });
+this.dispatchEvent(event);
 }
 keyup(e) {
 this.abc = e.target.value;

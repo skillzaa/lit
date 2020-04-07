@@ -6,6 +6,18 @@
 <body>
   <h1>So...</h1>
   <!-- <main-view></main-view> -->
-  <bilzaa-counter></bilzaa-counter>
+  <!-- <bilzaa-counter  count="55"></bilzaa-counter> -->
+  <bilzaa-toggle  
+  flag = "false"
+  property="showBorder"
+  boxtype="element"
+  description="Show / Hide Node Border"
+  title="Toggle Border"
+  ></bilzaa-toggle>
+
+ <script>
+ const myToggle = document.querySelector('bilzaa-toggle');
+myToggle.addEventListener('bilzaa-toggle', (e) => {console.log("Bilzaa Toggle Event",e.detail)});
+ </script> 
 <script type="text/javascript" src="main.js"></script></body>
 </html>

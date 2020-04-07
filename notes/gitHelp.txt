@@ -1,0 +1,46 @@
+
+git status
+// show status
+
+git stash 
+//will show all the uncommited chagnes
+
+git stash drop 
+//will drop all uncomitted changed.restore your app to the state it was just after last commit.
+
+git checkout <branchnmame>
+will move to naother branch but we need to create that locally also inadditon to creating it in github.
+
+git checkout -b <branch name> ????
+//create  a new local branch shd name the same as made on website.
+
+//to moerge 2 branches first of all make sure both are uptodate... keep in mind being uptodate locaaly does not mean being uptodate online
+1--- go to the branch you want to keep (master)
+git checkout <main branch name>
+git merge <branch to merge name>
+
+
+.........................DOWNLOAD A COMMIT 
+git fetch origin <sha1-of-commit-of-interest>
+
+# reset this repository's master branch to the commit of interest
+git reset --hard FETCH_HEAD
+
+-------delete branch
+$ git push --delete <remote_name> <branch_name>
+$ git branch -d <branch_name>
+Note that in most cases the remote name is origin.
+
+Delete Local Branch
+To delete the local branch use one of the following:
+
+$ git branch -d branch_name
+$ git branch -D branch_name
+-------------------------------------
+git log --stat
+
+//incase you have to add the remote origin again do following
+git remote add origin https://github.com/skillzaa/burger.git
+
+----to find out your origin URL and other details
+git remote show origin

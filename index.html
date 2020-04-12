@@ -5,14 +5,57 @@
 </head>
 <body>
   <h1>So...</h1>
-  <!-- <main-view></main-view> -->
-  <!-- <bilzaa-counter  count="55"></bilzaa-counter> -->
-  <!-- <bilzaa-toggle  
-  flag = "false"
+  <hr>
+  <bilzaa-colorpicker
+  title="This is a Color Picker"
+  ></bilzaa-colorpicker>
+  <hr>
+  <bilzaa-dropdown
+  title="This is a DropDown"
+  options = '[ 
+  {"value": 333, "option" : "Left"},
+  {"value": 444, "option" : "right"},
+  {"value": 555, "option" : "center"}
+]'
+  ></bilzaa-dropdown>
+  <hr/>
+  <bilzaa-toggle  
   property="showBorder"
   boxtype="element"
-  description="Show / Hide Node Border"
-  title="Toggle Border"
-  ></bilzaa-toggle> -->
+  title="Show / Hide Node Border"
+  ></bilzaa-toggle>
+<hr>
+<hr>
+<hr>
+  
+<bilzaa-slider
+property="border"
+  boxtype="element"
+  min="20"
+  max="80"
+  value="22"
+></bilzaa-slider>  
+
+<hr/>
+<bilzaa-foldablediv>
+
+
+</bilzaa-foldablediv> 
+
+<hr>
+
+
+  <bilzaa-properties
+  abc="This is an attribute from html"
+  ></bilzaa-properties>
+<button id="just">Click</button>
+<script>
+document.getElementById("just").addEventListener("click",function(){
+  let elm = document.querySelector("bilzaa-slider");
+  elm.value= 0;
+console.log('elm :', elm.value);
+})
+</script>
+  
 </body>
 </html>

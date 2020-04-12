@@ -75,16 +75,16 @@ this.title= "Your Title Here..."
 
 
 clickHandler(e) {
-let innerDiv  = this.shadowRoot.getElementById("innerDiv");  
-console.log('innerDiv :', innerDiv);
-innerDiv.classList.toggle("hide");
+// let innerDiv  = this.shadowRoot.getElementById("innerDiv");  
+// console.log('innerDiv :', innerDiv);
+// innerDiv.classList.toggle("hide");
 
-// let d = this.shadowRoot.getElementById("innerDiv");
-// if (d.style.display=="none"){
-//     d.style.display = "block";
-// }else{
-//     d.style.display = "none";
-// }
+let d = this.shadowRoot.getElementById("innerDiv");
+if (d.style.display=="none"){
+    d.style.display = "block";
+}else{
+    d.style.display = "none";
+}
 }
 
 render() {

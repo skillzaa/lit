@@ -1,7 +1,7 @@
 // import './views/main-view.js'
 // import './views/bilzaa-counter.js'
-// import './views/bilzaa-toggle.js'
-import './views/bilzaa-properties.js';
+ import './views/bilzaa-toggle.js'
+//import './views/bilzaa-properties.js';
 import './views/bilzaa-slider.js';
 import './views/bilzaa-toggle.js';
 import './views/bilzaa-foldablediv.js';

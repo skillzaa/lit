@@ -1,12 +1,12 @@
 import {LitElement, html, customElement, property,css} from 'lit-element'
 
-@customElement('bilzaa-dropdown')
 class BilzaaDropDown extends LitElement {
 static get properties(){
     return {
       title : {type:String},  
       property: {type: String},
       boxtype: {type: String},
+      value: {type: String},
       options: {type: Array}
     }
 }    
@@ -41,12 +41,10 @@ super();
 this.title="Your Title Here..";
 this.boxtype="element";
 this.property = "borderColor";
+this.value = "center";
 this.options= [];
 }
 
-clickHandler(e){
-console.log('this.options :', this.options);
-}
 changeHandler(e) {
 //  console.log('this.options :', this.options);  
 let event = new CustomEvent('bilzaa-dropdown', {
@@ -57,7 +55,7 @@ let event = new CustomEvent('bilzaa-dropdown', {
     }
   });
 this.dispatchEvent(event);
-// console.log('even :', event);
+ console.log('even :', event);
 }
 
 render() {
@@ -71,10 +69,17 @@ return html`
 @change="${(this.changeHandler)}"
 >
 ${this.options.map( opt => html`
-    <option class="opt" value="${opt.value}"> ${opt.option}</option>
+    <option 
+    class="opt" 
+    value="${opt.value}"
+    ?selected = "${(this.value=== opt.value)}"    
+    > 
+    ${opt.option}
+    </option>
     `)}
 </select>
 </div>
 `
   }
 }
+customElements.define('bilzaa-dropdown', BilzaaDropDown);

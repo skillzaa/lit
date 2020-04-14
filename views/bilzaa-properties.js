@@ -1,6 +1,6 @@
 import {LitElement, html, customElement, property} from 'lit-element'
 
-@customElement('bilzaa-properties')
+//@customElement('bilzaa-properties')
 class BilzaaProperties extends LitElement {
 
 static get properties(){
@@ -43,3 +43,4 @@ ${this.data.map( e =>{e.name})
     `
   }
 }
+customElements.define('bilzaa-properties', BilzaaProperties);

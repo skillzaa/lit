@@ -1,6 +1,6 @@
 import {LitElement, html, customElement, property,css} from 'lit-element'
 
-@customElement('bilzaa-toggle')
+//@customElement('bilzaa-toggle')
 class BilzaaToggle extends LitElement {
 static get properties(){
     return {
@@ -88,3 +88,4 @@ ${(this.flag===true)? "ON":"OFF"}
 `
   }
 }
+customElements.define('bilzaa-toggle', BilzaaToggle);

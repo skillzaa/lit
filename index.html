@@ -2,39 +2,39 @@
 <html>
 <head>
   <title></title>
+<!-- <script type="module" src="./index.js"></script>-->
 </head>
 <body>
   <h1>So...</h1>
   <hr>
-  <bilzaa-colorpicker
+  <!-- <bilzaa-colorpicker
   title="This is a Color Picker"
-  ></bilzaa-colorpicker>
+  value="#ea2323"
+  ></bilzaa-colorpicker> -->
   <hr>
   <bilzaa-dropdown
   title="This is a DropDown"
+  
   options = '[ 
-  {"value": 333, "option" : "Left"},
-  {"value": 444, "option" : "right"},
-  {"value": 555, "option" : "center"}
+  {"value": "left", "option" : "Left"},
+  {"value": "right", "option" : "Right"},
+  {"value": "center", "option" : "Center"}
 ]'
   ></bilzaa-dropdown>
   <hr/>
-  <bilzaa-toggle  
+  <!-- <bilzaa-toggle  
   property="showBorder"
   boxtype="element"
   title="Show / Hide Node Border"
-  ></bilzaa-toggle>
+  ></bilzaa-toggle> -->
 <hr>
-<hr>
-<hr>
-  
-<bilzaa-slider
+<!-- <bilzaa-slider
 property="border"
   boxtype="element"
   min="20"
   max="80"
   value="22"
-></bilzaa-slider>  
+></bilzaa-slider>   -->
 
 <hr/>
 <bilzaa-foldablediv>
@@ -45,17 +45,18 @@ property="border"
 <hr>
 
 
-  <bilzaa-properties
+  <!-- <bilzaa-properties
   abc="This is an attribute from html"
-  ></bilzaa-properties>
+  ></bilzaa-properties> -->
 <button id="just">Click</button>
 <script>
 document.getElementById("just").addEventListener("click",function(){
   let elm = document.querySelector("bilzaa-slider");
   elm.value= 0;
 console.log('elm :', elm.value);
-})
+});
+
 </script>
-  
+
 </body>
 </html>

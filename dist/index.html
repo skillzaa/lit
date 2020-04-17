@@ -3,10 +3,30 @@
 <head>
   <title></title>
 <!-- <script type="module" src="./index.js"></script>-->
+<style>
+  body{
+    background-color: rgb(204, 164, 164);
+  }
+</style>
 </head>
 <body>
   <h1>So...</h1>
   <hr>
+<bilzaa-textbox>
+
+</bilzaa-textbox>  
+  <hr>
+<bilzaa-showAlone>
+  <button>dddd</button>
+</bilzaa-showAlone>
+
+<div id="showAloneListener"></div>
+<script>
+  let aa = document.getElementById("showAloneListener");
+  aa.addEventListener("showAlone",function (e) {
+  console.log('e :', e);
+  });  
+</script>
   <!-- <bilzaa-colorpicker
   title="This is a Color Picker"
   value="#ea2323"
@@ -14,7 +34,6 @@
   <hr>
   <bilzaa-dropdown
   title="This is a DropDown"
-  
   options = '[ 
   {"value": "left", "option" : "Left"},
   {"value": "right", "option" : "Right"},
@@ -55,6 +74,7 @@ document.getElementById("just").addEventListener("click",function(){
   elm.value= 0;
 console.log('elm :', elm.value);
 });
+
 
 </script>
 

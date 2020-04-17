@@ -7,6 +7,9 @@ import './views/bilzaa-toggle.js';
 import './views/bilzaa-foldablediv.js';
 import './views/bilzaa-colorpicker.js';
 import './views/bilzaa-dropdown.js';
+import './views/bilzaa-showalone.js';
+import './views/bilzaa-textbox.js';
+import './views/bilzaa-side-panel.js';
 
 // const myElement = document.querySelector('bilzaa-counter');
 // myElement.addEventListener('click', (e) => {console.log(e)});

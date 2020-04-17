@@ -151,7 +151,6 @@ return html`
 
 <div id="topDiv">
     <div id="titleDiv">${this.title}</div>    
-
     <div id="displayDiv"  >${this.value}</div>    
 </div>
 <hr/>

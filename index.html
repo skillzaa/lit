@@ -5,25 +5,25 @@
 <body>
   <h1>So...</h1>
 
-<bilzaa-side-panel>
-  
-</bilzaa-side-panel>  
-  
-<!-- <bilzaa-textbox>
-
-</bilzaa-textbox>  
-  <hr>
-<bilzaa-showAlone>
-  <button>dddd</button>
-</bilzaa-showAlone>
-
-<div id="showAloneListener"></div> -->
-
-  <!-- <bilzaa-colorpicker
+<bilzaa-side-panel
+tabTitle="Title One"
+openBtnTop="47"
+>
+  <bilzaa-slider
+property="border"
+  boxtype="element"
+  min="20"
+  max="80"
+  value="22"
+></bilzaa-slider>
+<hr/>
+<bilzaa-colorpicker
   title="This is a Color Picker"
   value="#ea2323"
-  ></bilzaa-colorpicker> -->
-  <!-- <hr>
+  ></bilzaa-colorpicker>
+
+<hr/>  
+
   <bilzaa-dropdown
   title="This is a DropDown"
   options = '[ 
@@ -32,26 +32,38 @@
   {"value": "center", "option" : "Center"}
 ]'
   ></bilzaa-dropdown>
-  <hr/> -->
-  <!-- <bilzaa-toggle  
-  property="showBorder"
-  boxtype="element"
-  title="Show / Hide Node Border"
-  ></bilzaa-toggle> -->
 
-<!-- <bilzaa-slider
+</bilzaa-side-panel>  
+  
+<bilzaa-side-panel
+tabTitle="Title Two"
+openBtnTop="7"
+>
+  <bilzaa-slider
 property="border"
   boxtype="element"
   min="20"
   max="80"
   value="22"
-></bilzaa-slider>   -->
-<!-- <bilzaa-foldablediv>
-</bilzaa-foldablediv>  -->
+></bilzaa-slider>
+<hr/>
+<bilzaa-colorpicker
+  title="This is a Color Picker"
+  value="#ea2323"
+  ></bilzaa-colorpicker>
 
-  <!-- <bilzaa-properties
-  abc="This is an attribute from html"
-  ></bilzaa-properties> -->
+<hr/>  
 
+  <bilzaa-dropdown
+  title="This is a DropDown"
+  options = '[ 
+  {"value": "left", "option" : "Left"},
+  {"value": "right", "option" : "Right"},
+  {"value": "center", "option" : "Center"}
+]'
+  ></bilzaa-dropdown>
+
+</bilzaa-side-panel>  
+  
 </body>
 </html>

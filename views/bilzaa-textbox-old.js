@@ -24,8 +24,7 @@ static get properties(){
     height : {type:Number, reflect:true},
     left : {type:Number, reflect:true},
     top : {type:Number, reflect:true},
-    maxchar : {type:Number, reflect:true},
-    open : {type:Number,attribute: true , reflect:true}
+    maxchar : {type:Number, reflect:true}
   }
 }    
 
@@ -37,20 +36,14 @@ this.height=25;
 this.top=250;
 this.left=250;
 this.maxchar=5;
-this.open = 0;
 this.blinkOn = false;
 setInterval(this.blink, 1500);
 }
-attributeChangedCallback(name, oldval, newval) {
-let elm = this.shadowRoot.querySelector('#theElement');      
-console.log('attribute change: ',this.open);
-super.attributeChangedCallback(name, oldval, newval);
-}
 
 blink=()=>{
-if(this.open== 0){return;}  
 let elm = this.shadowRoot.querySelector('#theElement');    
-
+elm.style.display="inline";    
+elm.style.position = 'absolute';  // position it
 elm.style.width = `${this.width}px`;
 elm.style.height = `${this.height}px`;
 elm.style.left = `${this.left}px`;
@@ -59,13 +52,10 @@ elm.style.top =  `${this.top}px`;
 if(this.blinkOn===true){
     this.blinkOn = false;
     elm.style.border = "2px solid #fcc4c4";
-    elm.focus();
 }else{
     this.blinkOn = true;
     elm.style.border = "2px solid #ff0000"; 
-    elm.focus();
 }
-
 }
 firstUpdated() {
  // this.blink();
@@ -105,38 +95,14 @@ console.log('event :', event);
 }
 
 render() {
-if(this.open ==1){
-  return html`
-  <style>
-   #theElement{
-  width:100%;
-  padding:8px;
-  border-radius:25px;
-  height:1.35rem;
-  caret-color: red;
-  display:"inline";
-  position:"absolute";
-  color: "black";
-  box-sizing: border-box;
-  }    
-  </style>
-<div id="outer">  
-  <input id="theElement"  type="text"
-  @keyup="${this.keyUpHandler}"
-  @focus="${this.focusHandler}"
-  @focusout="${this.focusOutHandler}"
-  value="${this.value}"
->  
-</div>
- `
-}else{
-  return html`
-<div id="outer">   
-</div>
- `  
-}  
-
-  
-}//render
+return html`
+<input id="theElement"  type="text"
+@keyup="${this.keyUpHandler}"
+@focus="${this.focusHandler}"
+@focusout="${this.focusOutHandler}"
+value="${this.value}"
+>
+`
+  }
 }
 customElements.define('bilzaa-textbox', BilzaaTextBox);

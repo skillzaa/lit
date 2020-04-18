@@ -1,6 +1,6 @@
 import {LitElement, html, customElement, property,css} from 'lit-element'
 
-//@customElement('bilzaa-slider')
+
 export default class BilzaaSlider extends LitElement {
 static get properties(){
     return { 
@@ -147,9 +147,10 @@ console.log('e', event);
 }
   render() {
 return html`
-<div id="outerDiv">
+ <link rel="stylesheet" href="./tailwind.css">
+<div id="outerDiv" class="bg-teal-900">
 
-<div id="topDiv">
+<div id="topDiv" >
     <div id="titleDiv">${this.title}</div>    
     <div id="displayDiv"  >${this.value}</div>    
 </div>

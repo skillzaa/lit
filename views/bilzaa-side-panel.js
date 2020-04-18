@@ -93,16 +93,13 @@ return html`
   color:white;
 } 
 </style>  
-${(this.isOpen===false)?
-html`<button id="openBtn" @click="${this.open}" >${String.fromCharCode("9812")}</button>`
-: ""}
 
+<button id="openBtn" @click="${this.open}" >${String.fromCharCode("9812")}</button>
 
 <div id="parentDiv"  >
 <div id="childDiv"  >
-${(this.isOpen===true)?
-html`<button id="closeBtn" @click="${this.close}">${String.fromCharCode("9812")}</button>`
-:""}
+
+<button id="closeBtn" @click="${this.close}">${String.fromCharCode("9812")}</button>
 <hr/>
 <h3 id="tabTitle">${this.tabTitle}</h3>
 <slot></slot>

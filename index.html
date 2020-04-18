@@ -4,8 +4,36 @@
 </head>
 <body>
   <h1>So...</h1>
+  
+<bilzaa-textbox>
 
-<bilzaa-side-panel
+</bilzaa-textbox>
+<hr>
+<button id="openclose">open/close</button>
+
+<hr>
+<bilzaa-slider
+property="border"
+  boxtype="element"
+  min="20"
+  max="80"
+  value="22"
+></bilzaa-slider>
+<script>
+let b = document.querySelector("#openclose").addEventListener("click",function(){
+let tb = document.querySelector("bilzaa-textbox");
+if(tb.open==="1"){
+  tb.open="0";
+}else{
+  tb.open="1";
+}
+});
+
+
+
+</script>
+
+<!-- <bilzaa-side-panel
 tabTitle="Title One"
 openBtnTop="47"
 >
@@ -64,6 +92,6 @@ property="border"
   ></bilzaa-dropdown>
 
 </bilzaa-side-panel>  
-  
+   -->
 </body>
 </html>

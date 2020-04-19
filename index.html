@@ -3,14 +3,37 @@
 <head>
 </head>
 <body>
-  <h1>So...</h1>
-  
-<bilzaa-textbox>
-
-</bilzaa-textbox>
+  <h1>So...</h1>  
+<bilzaa-titlebox
+open="0"
+left="300"
+top="400"
+>
+</bilzaa-titlebox>
 <hr>
 <button id="openclose">open/close</button>
+<button id="move">move</button>
+<script>
+  let b = document.querySelector("#openclose").addEventListener("click",function(){
+  let tb = document.querySelector("bilzaa-titlebox");
+  if(tb.open==="1"){
+    tb.open="0";
+  }else{
+    tb.top="200";
+    tb.left="200";
+    tb.open="1";
+  }
+  });
 
+  let c = document.querySelector("#move").addEventListener("click",function(){
+  let tb = document.querySelector("bilzaa-titlebox");
+  if(tb.open==="1"){
+   tb.value = "400";
+   tb.left = "400";
+   tb.top = "400";
+  }
+  });
+  </script>  
 <hr>
 <bilzaa-slider
 property="border"
@@ -19,19 +42,6 @@ property="border"
   max="80"
   value="22"
 ></bilzaa-slider>
-<script>
-let b = document.querySelector("#openclose").addEventListener("click",function(){
-let tb = document.querySelector("bilzaa-textbox");
-if(tb.open==="1"){
-  tb.open="0";
-}else{
-  tb.open="1";
-}
-});
-
-
-
-</script>
 
 <!-- <bilzaa-side-panel
 tabTitle="Title One"

@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-<!-- <script type="module" src="./index.js"></script>-->
-<style>
-  body{
-    background-color: rgb(204, 164, 164);
-  }
-</style>
 </head>
 <body>
-  <h1>So...</h1>
-  <hr>
-<bilzaa-textbox>
-
-</bilzaa-textbox>  
-  <hr>
-<bilzaa-showAlone>
-  <button>dddd</button>
-</bilzaa-showAlone>
-
-<div id="showAloneListener"></div>
+  <h1>So...</h1>  
+<bilzaa-titlebox
+open="0"
+left="300"
+top="400"
+>
+</bilzaa-titlebox>
+<hr>
+<button id="openclose">open/close</button>
+<button id="move">move</button>
 <script>
-  let aa = document.getElementById("showAloneListener");
-  aa.addEventListener("showAlone",function (e) {
-  console.log('e :', e);
-  });  
-</script>
-  <!-- <bilzaa-colorpicker
+  let b = document.querySelector("#openclose").addEventListener("click",function(){
+  let tb = document.querySelector("bilzaa-titlebox");
+  if(tb.open==="1"){
+    tb.open="0";
+  }else{
+    tb.top="200";
+    tb.left="200";
+    tb.open="1";
+  }
+  });
+
+  let c = document.querySelector("#move").addEventListener("click",function(){
+  let tb = document.querySelector("bilzaa-titlebox");
+  if(tb.open==="1"){
+   tb.value = "400";
+   tb.left = "400";
+   tb.top = "400";
+  }
+  });
+  </script>  
+<hr>
+<bilzaa-slider
+property="border"
+  boxtype="element"
+  min="20"
+  max="80"
+  value="22"
+></bilzaa-slider>
+
+<!-- <bilzaa-side-panel
+tabTitle="Title One"
+openBtnTop="47"
+>
+  <bilzaa-slider
+property="border"
+  boxtype="element"
+  min="20"
+  max="80"
+  value="22"
+></bilzaa-slider>
+<hr/>
+<bilzaa-colorpicker
   title="This is a Color Picker"
   value="#ea2323"
-  ></bilzaa-colorpicker> -->
-  <hr>
+  ></bilzaa-colorpicker>
+
+<hr/>  
+
   <bilzaa-dropdown
   title="This is a DropDown"
   options = '[ 
@@ -40,43 +70,38 @@
   {"value": "center", "option" : "Center"}
 ]'
   ></bilzaa-dropdown>
-  <hr/>
-  <!-- <bilzaa-toggle  
-  property="showBorder"
-  boxtype="element"
-  title="Show / Hide Node Border"
-  ></bilzaa-toggle> -->
-<hr>
-<!-- <bilzaa-slider
+
+</bilzaa-side-panel>  
+  
+<bilzaa-side-panel
+tabTitle="Title Two"
+openBtnTop="7"
+>
+  <bilzaa-slider
 property="border"
   boxtype="element"
   min="20"
   max="80"
   value="22"
-></bilzaa-slider>   -->
-
+></bilzaa-slider>
 <hr/>
-<bilzaa-foldablediv>
+<bilzaa-colorpicker
+  title="This is a Color Picker"
+  value="#ea2323"
+  ></bilzaa-colorpicker>
 
+<hr/>  
 
-</bilzaa-foldablediv> 
+  <bilzaa-dropdown
+  title="This is a DropDown"
+  options = '[ 
+  {"value": "left", "option" : "Left"},
+  {"value": "right", "option" : "Right"},
+  {"value": "center", "option" : "Center"}
+]'
+  ></bilzaa-dropdown>
 
-<hr>
-
-
-  <!-- <bilzaa-properties
-  abc="This is an attribute from html"
-  ></bilzaa-properties> -->
-<button id="just">Click</button>
-<script>
-document.getElementById("just").addEventListener("click",function(){
-  let elm = document.querySelector("bilzaa-slider");
-  elm.value= 0;
-console.log('elm :', elm.value);
-});
-
-
-</script>
-
+</bilzaa-side-panel>  
+   -->
 <script type="text/javascript" src="main.js"></script></body>
 </html>

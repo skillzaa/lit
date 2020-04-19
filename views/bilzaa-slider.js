@@ -147,8 +147,7 @@ console.log('e', event);
 }
   render() {
 return html`
- <link rel="stylesheet" href="./tailwind.css">
-<div id="outerDiv" class="bg-teal-900">
+<div id="outerDiv">
 
 <div id="topDiv" >
     <div id="titleDiv">${this.title}</div>    

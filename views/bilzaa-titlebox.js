@@ -1,16 +1,14 @@
 import {LitElement, html,css} from 'lit-element'
 
-class BilzaaTextBox extends LitElement {
+class BilzaaTitleBox extends LitElement {
 static get styles() {
 return css`
   #theElement{
-  width:100%;
   padding:8px;
   border-radius:25px;
   height:1.35rem;
   caret-color: red;
-  display:"inline";
-  position:"absolute";
+  position:absolute;
   color: "black";
   box-sizing: border-box;
   }    
@@ -36,36 +34,43 @@ this.width=250;
 this.height=25;
 this.top=250;
 this.left=250;
-this.maxchar=5;
-this.open = 0;
+this.maxchar=15;
+this.open = 1;
 this.blinkOn = false;
 setInterval(this.blink, 1500);
 }
 attributeChangedCallback(name, oldval, newval) {
-let elm = this.shadowRoot.querySelector('#theElement');      
-console.log('attribute change: ',this.open);
+let elm = this.shadowRoot.querySelector('#theElement');       
+
+if(elm !== null){
+if(this.open==1){
+  elm.style.width = `${this.width}px`;
+  elm.style.height = `${this.height}px`;
+  elm.style.left = `${this.left}px`;
+  elm.style.top =  `${this.top}px`;
+  elm.value =  `${this.value}`;
+  elm.style.display="inline-block";  
+          if(name==="open"){
+            elm.focus(); 
+          }
+          
+  }else{
+    elm.style.display="none";
+  }  
+}
 super.attributeChangedCallback(name, oldval, newval);
 }
 
 blink=()=>{
 if(this.open== 0){return;}  
 let elm = this.shadowRoot.querySelector('#theElement');    
-
-elm.style.width = `${this.width}px`;
-elm.style.height = `${this.height}px`;
-elm.style.left = `${this.left}px`;
-elm.style.top =  `${this.top}px`;
-
 if(this.blinkOn===true){
     this.blinkOn = false;
     elm.style.border = "2px solid #fcc4c4";
-    elm.focus();
 }else{
     this.blinkOn = true;
     elm.style.border = "2px solid #ff0000"; 
-    elm.focus();
 }
-
 }
 firstUpdated() {
  // this.blink();
@@ -105,38 +110,18 @@ console.log('event :', event);
 }
 
 render() {
-if(this.open ==1){
   return html`
-  <style>
-   #theElement{
-  width:100%;
-  padding:8px;
-  border-radius:25px;
-  height:1.35rem;
-  caret-color: red;
-  display:"inline";
-  position:"absolute";
-  color: "black";
-  box-sizing: border-box;
-  }    
-  </style>
-<div id="outer">  
-  <input id="theElement"  type="text"
+  <input 
+  id="theElement"  
+  type="text"
   @keyup="${this.keyUpHandler}"
   @focus="${this.focusHandler}"
   @focusout="${this.focusOutHandler}"
   value="${this.value}"
->  
-</div>
+/>  
  `
-}else{
-  return html`
-<div id="outer">   
-</div>
- `  
-}  
-
+  
   
 }//render
 }
-customElements.define('bilzaa-textbox', BilzaaTextBox);
+customElements.define('bilzaa-titlebox', BilzaaTitleBox);

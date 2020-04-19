@@ -3,105 +3,30 @@
 <head>
 </head>
 <body>
-  <h1>So...</h1>  
-<bilzaa-titlebox
-open="0"
-left="300"
-top="400"
+
+<h3>Tool Tip</h3>
+<bilzaa-tooltip
+tip="Now I am enjoying making web-components since I can start a new thing every time and with in few hours I have a fully functional thing that not only work but can be used for rest of your life and its is plug and play"
+OPEN="0"
 >
-</bilzaa-titlebox>
-<hr>
-<button id="openclose">open/close</button>
-<button id="move">move</button>
+</bilzaa-tooltip>
+<hr/>
+<button id="hide">Hide</button>
+<hr/>
+<hr/>
+<hr/>
 <script>
-  let b = document.querySelector("#openclose").addEventListener("click",function(){
-  let tb = document.querySelector("bilzaa-titlebox");
-  if(tb.open==="1"){
-    tb.open="0";
-  }else{
-    tb.top="200";
-    tb.left="200";
-    tb.open="1";
-  }
-  });
-
-  let c = document.querySelector("#move").addEventListener("click",function(){
-  let tb = document.querySelector("bilzaa-titlebox");
-  if(tb.open==="1"){
-   tb.value = "400";
-   tb.left = "400";
-   tb.top = "400";
-  }
-  });
-  </script>  
-<hr>
-<bilzaa-slider
-property="border"
-  boxtype="element"
-  min="20"
-  max="80"
-  value="22"
-></bilzaa-slider>
-
-<!-- <bilzaa-side-panel
-tabTitle="Title One"
-openBtnTop="47"
->
-  <bilzaa-slider
-property="border"
-  boxtype="element"
-  min="20"
-  max="80"
-  value="22"
-></bilzaa-slider>
-<hr/>
-<bilzaa-colorpicker
-  title="This is a Color Picker"
-  value="#ea2323"
-  ></bilzaa-colorpicker>
-
-<hr/>  
-
-  <bilzaa-dropdown
-  title="This is a DropDown"
-  options = '[ 
-  {"value": "left", "option" : "Left"},
-  {"value": "right", "option" : "Right"},
-  {"value": "center", "option" : "Center"}
-]'
-  ></bilzaa-dropdown>
-
-</bilzaa-side-panel>  
-  
-<bilzaa-side-panel
-tabTitle="Title Two"
-openBtnTop="7"
->
-  <bilzaa-slider
-property="border"
-  boxtype="element"
-  min="20"
-  max="80"
-  value="22"
-></bilzaa-slider>
-<hr/>
-<bilzaa-colorpicker
-  title="This is a Color Picker"
-  value="#ea2323"
-  ></bilzaa-colorpicker>
-
-<hr/>  
-
-  <bilzaa-dropdown
-  title="This is a DropDown"
-  options = '[ 
-  {"value": "left", "option" : "Left"},
-  {"value": "right", "option" : "Right"},
-  {"value": "center", "option" : "Center"}
-]'
-  ></bilzaa-dropdown>
-
-</bilzaa-side-panel>  
-   -->
+document.getElementById("hide").addEventListener("click",function(e){
+let btn = document.querySelector("bilzaa-tooltip");
+if(btn.open == "1"){
+ btn.open="0"; 
+   
+}else{
+    btn.open="1";
+    btn.top = 300;
+}
+//console.log('ok :');
+});    
+</script>
 <script type="text/javascript" src="main.js"></script></body>
 </html>

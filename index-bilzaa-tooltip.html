@@ -7,26 +7,7 @@
 <h3>Tool Tip</h3>
 <bilzaa-tooltip
 tip="Now I am enjoying making web-components since I can start a new thing every time and with in few hours I have a fully functional thing that not only work but can be used for rest of your life and its is plug and play"
-open="0"
 >
 </bilzaa-tooltip>
-<hr/>
-<button id="hide">Hide</button>
-<hr/>
-<hr/>
-<hr/>
-<script>
-document.getElementById("hide").addEventListener("click",function(e){
-let btn = document.querySelector("bilzaa-tooltip");
-if(btn.open == "1"){
- btn.open="0"; 
-   
-}else{
-    btn.open="1";
-    btn.top = 300;
-}
-//console.log('ok :');
-});    
-</script>
 </body>
 </html>

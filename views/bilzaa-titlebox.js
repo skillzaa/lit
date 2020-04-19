@@ -52,8 +52,7 @@ if(this.open==1){
   elm.style.display="inline-block";  
           if(name==="open"){
             elm.focus(); 
-          }
-          
+          }       
   }else{
     elm.style.display="none";
   }  

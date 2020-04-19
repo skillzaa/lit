@@ -1,7 +1,6 @@
 import {LitElement, html, customElement, property,css} from 'lit-element'
 
-
-export default class BilzaaSlider extends LitElement {
+export default class BilzaaSliderThree extends LitElement {
 static get properties(){
     return { 
     min: {type: Number},
@@ -204,4 +203,4 @@ value="${this.value}"
 `
   }
 }
-customElements.define('bilzaa-slider', BilzaaSlider);
+customElements.define('bilzaa-sliderthree', BilzaaSliderThree);
